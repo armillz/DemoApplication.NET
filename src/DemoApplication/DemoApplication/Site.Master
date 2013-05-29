@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DemoApplication.Site" %>
+<%@ Register TagPrefix="wuc" TagName="PageHeader" Src="~/Controls/PageHeader.ascx" %>
+<%@ Register TagPrefix="wuc" TagName="PageFooter" Src="~/Controls/PageFooter.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+      <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:Gray">
+    <form id="form1" runat="server">
+    <div style="width:70%; padding-left:250px; padding-right:250px;">
+     <div style="background-color:#D3D3D3;">
+            <wuc:PageHeader ID="PageHeader" runat="server" />
+        </div>
+    <div >
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="background-color:#D3D3D3;">
+    <wuc:PageFooter ID="PageFooter" runat="server" /></div></div>
+    </form>
+</body>
+</html>
