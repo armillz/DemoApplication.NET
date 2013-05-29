@@ -17,7 +17,7 @@ setlocal
 @rem if user does not set MsDeployPath environment variable, we will try to retrieve it from registry.
 @rem ---------------------------------------------------------------------------------
 if "%MSDeployPath%" == "" (
-for /F "usebackq tokens=2*" %%i  in (`reg query "HKLM\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\1" /v InstallPath`) do (
+for /F "usebackq tokens=2*" %%i  in (`reg query "HKLM\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\2" /v InstallPath`) do (
 if "%%~dpj" == "%%j" ( 
 set MSDeployPath=%%j
 )))
